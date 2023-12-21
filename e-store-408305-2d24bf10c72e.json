@@ -1,0 +1,17 @@
+{
+  "type": "service_account",
+  "project_id": "e-store-408305",
+  "private_key_id": "2d24bf10c72ebb7816f1649316ba77d9030fae81",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQClKD9yM0bXDmSh\nLT5B6ct3vZbNmV8FO2RoThCn8ondh8axF3nbsx/1DibO1snR1TtPpNro5HtKP4SR\n2HVlpXaaez3GH6daj5nMXWWmMTOOLSXl4zwbRgZgTlvEkXEJatw6D44kS1AQcLbE\nCmphvAOjA+uTEWS3RqpIkoMLnwpBfUkw8M7Wc2ZTqse0XnY1m3M9SWnI7MlkEFtS\ny9HbOTCX1OXtHAvbQZzZz8lSx+/qsTW9fxFZt0fjf1yL8iH2iWb3/Y83z71hdIdA\nCc/+Dj2BdpE8ty81evnsjAsbR0FogYNvVBERftzH4Szfz6LAZGftXJmHvc1iPqeS\nLZGkiz8ZAgMBAAECggEAAZvrRlMOkSDQRSu6LA05kMCVnAou/U+PUl7UVbaMtk5Q\n1r/aTZQorwwEv8Yi8DrqGYQLJ/K16srEoWEg/60Fg0rJFsmPKVg10OJmD6DyFiQF\ndwBoQQHFJSIOTdN27PcQDzbAlUTwkkBu32kUkUAyLt/mZyfnuctj9FINGctiX7Hz\nRrN5ag81WVBUeYBNdZcB0NVXqe3wCO8JsPJzFkOmJ2WYtSF6WLDThSnSIM4DmpEc\nh0gqjM7GSHpcbdi9KJJAApM6D7voUUMWH7yzJxBTyZCQper4bB3bmK+TG8ImOiIT\nB8JPmv8TP4KbyXIImWOq7hFFGCjqWX1Ne/+z6Nm66wKBgQDVWxbi06Ri8+1eUANk\nGkzzAxbnC/WDrz0Y+Q8zaXFRkI0hD/qjSO1bVwz9hgOr1f+O77v1dCINx70aEFh+\nj7pBE1u/8FhvQQthfskTb9Pg1lpG3J4tpcNq2jiCcHOkbHgL5pL20IuB++XfcLFo\nGlN0PaPsgw4i+k9APpgKzXBwAwKBgQDGKvNV2HXXQwBAw6sS86CH6L49RD4NbQch\nesIEmS2+Igr8GjMPGCx6csl+xOQtZTJQpP0ctYpdfYfCf/FxKOaSBDYaRUX4DpuC\n1/oD0TFmiOOsNibnEIG/XgkKo4GgetBEey+do4JkYpeMwsk2RO6LJbfPIFjbwnyL\nfZuT2XRPswKBgQCRRFoKyutsbIU75+LHL5khBQN9AQmDRbel3z5YVPzQ+kj9L/IJ\nZ0glHto7bBnnz+cXHWeusgnVtB+vNV3rnlTEpjecMjskVPc4xKiH0WZD+e6xvNj+\nX5T0lexP89zpIOmDwNRjtI6oTCixv/sq1HHp/WY1TO49Joz7QyMmh8Z8nQKBgQCq\nl1TMpL+k5H+2QPrnIKUj+l6yXSnR4vaNgqC81qSDFclBBsjHiLbZXjFJGPOYhJIQ\nzEc8TKdlHegdrohJMr1yG3/7k4DNLr3+oDAQ0yfkrZjYqfFJXnNjKu87ok+3t6HM\nIgN2f8iC5EC0IwaV2jdDv9+AxcbYv475gdLJLxwqcwKBgG87iZvfkt08Zvzi4WGd\nuNCkuxMh++STgY6mQoRJCwJVEmSKUBGTs76cV9b/kgT09OGfMeir8NDznoAP38PP\nQjWxJ4Ab3wKzd1VxzTQWksh/cdIBQkJrljImLZ/hbUyAPbFkeK6rql26EaXp6LYk\nuB78SBfIwaS6mqcA0oGJk4L/\n-----END PRIVATE KEY-----\n",
+  "client_email": "vyomakesh23@e-store-408305.iam.gserviceaccount.com",
+  "client_id": "102666468107190646241",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vyomakesh23%40e-store-408305.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com",
+  "installed":
+    {
+      "client_id":"283007276180-ucagelc0s170v6bp3s6p6dk9qqa3hgul.apps.googleusercontent.com","project_id":"e-store-408305","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"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","redirect_uris":["http://localhost"]
+    }
+}
