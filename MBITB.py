@@ -1,11 +1,67 @@
 import tkinter as tk
-from tkinter import ttk,filedialog
-from tkinter import messagebox
+from tkinter import ttk, filedialog, messagebox
 from openpyxl import load_workbook
 import os
 from datetime import datetime
 import pandas as pd
 import json
+import gspread
+from gspread.exceptions import SpreadsheetNotFound
+from oauth2client.service_account import ServiceAccountCredentials
+from PIL import Image, ImageTk
+
+class StartDialog:
+    def __init__(self, root):
+        self.root = root
+        
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        self.root.geometry(f"{screen_width}x{screen_height}")
+
+        self.create_start_dialog()
+
+    def create_start_dialog(self):
+        try:
+            image = Image.open("C:/Users/vyoma/Downloads/excelapp-main (1)/excelapp-main/E STORE-logos.jpeg")
+            image = image.resize((600, 600), Image.ANTIALIAS)
+            logo_image = ImageTk.PhotoImage(image)
+
+            window_width, window_height = image.size
+            self.root.geometry(f"{window_width}x{window_height}")
+
+            self.root.configure(background='#FFDAB9')
+            self.root.overrideredirect(True)
+
+            logo_label = ttk.Label(self.root, image=logo_image, background='#FFDAB9')
+            logo_label.image = logo_image
+            logo_label.pack()
+
+            self.root.update_idletasks()
+            width = self.root.winfo_width()
+            height = self.root.winfo_height()
+            x = (self.root.winfo_screenwidth() // 2) - (width // 2)
+            y = (self.root.winfo_screenheight() // 2) - (height // 2)
+            self.root.geometry(f"+{x}+{y}")
+
+            self.root.after(3000, self.load_main_application)
+        except Exception as e:
+            print(f"Error: {e}")
+
+    def center_window(self):
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        x_coordinate = (screen_width - self.root.winfo_reqwidth()) / 2
+        y_coordinate = (screen_height - self.root.winfo_reqheight()) / 2
+        self.root.geometry("+%d+%d" % (x_coordinate, y_coordinate))
+
+    def load_main_application(self):
+        try:
+            self.root.destroy()  # Close the loading screen
+            root = tk.Tk()  # Create the main root window
+            app = StoreApp(root)  # Initialize your main application window
+            root.mainloop()  # Run the main loop
+        except Exception as e:
+            print("Error loading main application:", str(e))
 
 class ToolTip:
     def __init__(self, widget, text):
@@ -349,9 +405,9 @@ class StoreApp:
         self.entry_added_in.grid(row=0, column=1, padx=10, pady=5)
 
         self.person_name_label = ttk.Label(frame_entries, text="Person Name: ", font=('Arial', 10), width=12, anchor=tk.E)
-        self.person_name_label.grid(row=1, column=0, padx=10, pady=20)
+        self.person_name_label.grid(row=1, column=0, padx=10, pady=10)
         self.entry_person_name = ttk.Entry(frame_entries, width=20)
-        self.entry_person_name.grid(row=1, column=1, padx=10, pady=20)
+        self.entry_person_name.grid(row=1, column=1, padx=10, pady=10)
 
         # Button to confirm adding materials
         confirm_button = ttk.Button(add_dialog, text="Confirm", command=lambda: self.handle_action("add", entry_quantity.get()))
@@ -415,8 +471,8 @@ class StoreApp:
 
         self.person_name_label = ttk.Label(frame_entries, text="Person Name: ", font=('Arial', 10), width=12, anchor=tk.E)
         self.person_name_label.grid(row=1, column=0, padx=10, pady=5)
-        self.entry_person_name = ttk.Entry(frame_entries, width=40)
-        self.entry_person_name.grid(row=1, column=1, padx=10, pady=5)
+        self.entry_person_name_2 = ttk.Entry(frame_entries, width=40)
+        self.entry_person_name_2.grid(row=1, column=1, padx=10, pady=5)
 
         # Button to confirm removing materials
         confirm_button = ttk.Button(remove_dialog, text="Confirm", command=lambda: self.handle_action("remove", entry_quantity.get()))
@@ -530,7 +586,6 @@ class StoreApp:
 
                 self.tree.insert('','end', values=[timestamp, material, material_code, quantity, action, location, person_name])
 
-
         else:
             print("Invalid log file format or no file selected.")
 
@@ -611,6 +666,7 @@ class StoreApp:
 
 
 # Create the Tkinter window and run the app
-root = tk.Tk()
-app = StoreApp(root)
-root.mainloop()
+if __name__ == "__main__":
+    root = tk.Tk()
+    start_dialog = StartDialog(root)
+    root.mainloop()
